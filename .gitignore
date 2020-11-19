@@ -1,0 +1,5 @@
+.env
+/nbproject/private/
+/.vscode/
+/nbproject/
+/node_modules/
