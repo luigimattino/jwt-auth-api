@@ -154,6 +154,46 @@
 			"response": []
 		},
 		{
+			"name": "logout",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4edcf8c8-51d1-419c-a188-a1b9098edd91",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"{{jwt_refresh_token}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "resources",
 			"request": {
 				"method": "GET",
