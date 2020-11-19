@@ -13,3 +13,26 @@ E' presente una collection di postman con cui testare le API e relativo environm
 *   [bcrypt](https://github.com/kelektiv/node.bcrypt.js) - A library to help you hash passwords.
 *   [dotenv](https://github.com/motdotla/dotenv) - Loads environment variables from .env file.
 *   [pg](https://github.com/brianc/node-postgres) - node-postgres is a collection of node.js modules for interfacing with your PostgreSQL database.
+
+## Running the application Locally
+
+Make sure you have [Node.js](http://nodejs.org/) and the [PostgreSQL](https://www.postgresql.org/) installed.
+
+```sh
+git clone https://luigimattino@github.com/luigimattino/jwt-auth-api.git # or clone your own fork
+cd jwt-auth-api
+create a [.env file](#env-file).
+npm install
+npm start
+```
+This API app should now be running on [localhost:3000](http://localhost:3000/).
+
+## ENV file
+
+Create a .env file and insert your config data
+<pre style="font-size:80%;">
+ACCESS_64_KEY=<keyword>
+REFRESH_64_KEY=<keyword>
+DB_USER=<db_user>
+DB_PWD=******
+</pre>
