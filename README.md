@@ -22,7 +22,7 @@ Make sure you have [Node.js](http://nodejs.org/) and the [PostgreSQL](https://ww
 git clone https://luigimattino@github.com/luigimattino/jwt-auth-api.git # or clone your own fork
 cd jwt-auth-api
 ```
-Create a [.env file](#env-file) file.
+Create a [.env file](#env-file) file inside the project folder.
 ```sh
 npm install
 npm start
@@ -31,10 +31,10 @@ This API app should now be running on [localhost:3000](http://localhost:3000/).
 
 ## ENV file
 
-Create a .env file and insert your config data
+Create a .env file and insert your config data, as shown below:
 <pre style="font-size:80%;">
-ACCESS_64_KEY=<keyword>
-REFRESH_64_KEY=<keyword>
-DB_USER=<db_user>
+ACCESS_64_KEY=**keyword 64 characters**
+REFRESH_64_KEY=**keyword 64 characters**
+DB_USER=**db_user**
 DB_PWD=******
 </pre>
