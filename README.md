@@ -18,6 +18,7 @@ E' presente una collection di postman con cui testare le API e relativo environm
 
 Make sure you have [Node.js](http://nodejs.org/) and the [PostgreSQL](https://www.postgresql.org/) installed.
 
+```sh
 git clone https://luigimattino@github.com/luigimattino/jwt-auth-api.git # or clone your own fork
 cd jwt-auth-api
 ```
