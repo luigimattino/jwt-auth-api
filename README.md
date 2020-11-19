@@ -16,7 +16,7 @@ E' presente una collection di postman con cui testare le API e relativo environm
 
 ## Running the application Locally
 
-Make sure you have [Node.js](http://nodejs.org/) and the [PostgreSQL](https://www.postgresql.org/) installed.
+Make sure you have [Node.js](http://nodejs.org/) and the [PostgreSQL](https://www.postgresql.org/) installed. You need to create a schema labelled as "jwt-auth-api", once the API app is running it create two tables for user data and refresh token.
 
 ```sh
 git clone https://luigimattino@github.com/luigimattino/jwt-auth-api.git # or clone your own fork

@@ -106,11 +106,33 @@ function token(request, response) {
     }
 }
 
+function logout(request, response) {
+    const refresh_token = request.body.token;
+    try {
+        if (!refresh_token)
+            throw new AppError('Logout failed. Refresh token not provided.');
+        return queries.getRefreshToken(refresh_token).then(
+            result => {
+                if (result.rows && result.rows.length === 0) {
+                    throw new AppError('Logout failed. Refresh token not found.');
+                }
+                var data = result.rows[0];
+                return queries.deleteRefreshTokenByUserId(data.user_id).then(() => response.sendStatus(204));
+            }
+        ).catch((err) => { handleLogoutError(err, response); });
+    } catch (err) {
+        handleLogoutError(err, response);
+    }
+}
+
+
 const handleRegistrationError = (err, response) => handleError(err, response, 'Registration failed. Unexpected Error.');
 
 const handleLoginError = (err, response) => handleError(err, response, 'Authentication failed. Unexpected Error.');
 
 const handleRefreshTokenError = (err, response) => handleError(err, response, 'Token failed. Unexpected Error.');
+
+const handleLogoutError = (err, response) => handleError(err, response, 'Logout failed. Unexpected Error.');
 
 const handleError = (err, response, main_message) => {
     console.error(err.message);
@@ -148,5 +170,6 @@ module.exports = {
     verify,
     signup,
     login,
+    logout,
     token
 }
