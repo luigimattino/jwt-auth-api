@@ -21,7 +21,7 @@ Make sure you have [Node.js](http://nodejs.org/) and the [PostgreSQL](https://ww
 ```sh
 git clone https://luigimattino@github.com/luigimattino/jwt-auth-api.git # or clone your own fork
 cd jwt-auth-api
-create a [.env file](#env-file).
+create a [env](#env-file) file.
 npm install
 npm start
 ```
